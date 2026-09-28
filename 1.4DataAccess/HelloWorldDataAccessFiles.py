@@ -90,7 +90,7 @@ print(var2)
 var = {"BAIT": "Brito Artificial Intelligence Team",
             "MEEC": "Master in Electronics Engineering and Computers",
             "EST": "Escola Superior de Tecnologia",
-            "IPCA": "Instituto Politécnico do Cávado e do Ave"}
+            "UPCA": "Universidade Politécnica do Cávado e do Ave"}
 with open(os.path.join(folder, "var_dict.json"), "w") as fp:
     json.dump(var, fp)
 with open(os.path.join(folder, "var_dict.json"), "r") as data_file:
