@@ -60,11 +60,12 @@ ax.set_title("Split Data")
 # plt.show()
 # plt.close(fig)
 
-model = LinearSVC()
-# model = KNeighborsClassifier(n_neighbors=7)
+
+model = KNeighborsClassifier(n_neighbors=7)
 # model = DecisionTreeClassifier()
 # model = RandomForestClassifier()
 # model = AdaBoostClassifier()
+# model = LinearSVC()
 # model = MLPClassifier()
 
 model.fit(X_train, Y_train)
