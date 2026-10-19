@@ -200,7 +200,6 @@ plt.xlabel('Epoch Number')
 plt.ylabel("Loss Magnitude")
 plt.title("Normalized Model")
 
-plt.show()
 
 plt.figure(4)
 plt.subplot(1, 3, 1)
