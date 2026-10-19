@@ -50,7 +50,8 @@ def update_lines():
 
     image_with_lines = img.copy()
     for line_i in lines:
-        line = line_i[0]
+        # line = line_i[0]
+        line = line_i
         cv2.line(image_with_lines,
                  (int(line[0]), int(line[1])),
                  (int(line[2]), int(line[3])),
@@ -84,4 +85,4 @@ cv2.createTrackbar("hl_minLineLength", "Building Lines", hl_minLineLength, 500, 
 cv2.createTrackbar("hl_maxLineGap", "Building Lines", hl_maxLineGap, 500, on_trackbar_hl_maxLineGap)
 update_lines()
 
-cv2.waitKey()
+cv2.waitKey(0)

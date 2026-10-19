@@ -1,7 +1,10 @@
+import matplotlib
 import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.decomposition import PCA, KernelPCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+
+matplotlib.use("TkAgg")
 
 ####
 # Comparison of LDA and PCA 2D projection of Iris dataset

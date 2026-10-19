@@ -1,10 +1,13 @@
 # Clustering
 # https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 from sklearn.cluster import KMeans, MeanShift
 from sklearn.mixture import GaussianMixture
+
+matplotlib.use("TkAgg")
 
 np.random.seed(1)
 
@@ -38,6 +41,8 @@ X, Y = make_samples(n_samples_per_class=n_samples_per_class,
                     class1_x0_mean=20.0, class1_x0_std=2.0, class1_x1_mean=10.0, class1_x1_std=2.0,
                     class2_x0_mean=30.0, class2_x0_std=2.0, class2_x1_mean=20.0, class2_x1_std=2.0)
 
+fig = plt.figure(1)
+
 plt.subplot(1, 4, 1)
 plt.scatter(X[:, 0], X[:, 1], c=Y)
 plt.title("Groundtruth Data")
@@ -57,9 +62,10 @@ plt.subplot(1, 4, 4)
 plt.scatter(X[:, 0], X[:, 1], c=y_pred_gaussianmixture)
 plt.title("Gaussian Mixture")
 
-plt.show()
-plt.close()
+# plt.show()
+# plt.close()
 
+fig = plt.figure(2)
 # Incorrect number of clusters
 plt.subplot(4, 4, 1)
 plt.title("Incorrect Number of Cluster")

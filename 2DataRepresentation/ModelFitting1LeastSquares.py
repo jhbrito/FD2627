@@ -17,7 +17,10 @@
 
 import numpy as np
 from numpy.random import default_rng
+import matplotlib
 import matplotlib.pyplot as plt
+
+matplotlib.use("TkAgg")
 
 N = 100
 x = np.array(range(N))

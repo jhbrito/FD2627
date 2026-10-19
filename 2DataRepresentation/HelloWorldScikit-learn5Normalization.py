@@ -2,12 +2,14 @@
 # Straightforward example without normalization
 # the network should approximate the correct relationship between Celsius and Fahrenheit
 # C × 1.8 + 32 = F
-
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import cm
 from sklearn.neural_network import MLPRegressor
 import numpy as np
 from numpy.random import default_rng
+
+matplotlib.use("TkAgg")
 
 EPOCHS = 500
 lr = 0.1
@@ -59,6 +61,12 @@ mean_squared_error = np.mean(squared_error, axis=2)
 weight_grid_2D, bias_grid_2D = np.meshgrid(weight, bias)
 
 fig = plt.figure(1)
+plt.scatter(fahrenheit, celsius)
+plt.xlabel('Celsius')
+plt.ylabel("Fahrenheit")
+plt.title("Dataset")
+
+fig = plt.figure(2)
 ax = fig.add_subplot(1, 2, 1, projection='3d')
 # surf = ax.plot_surface(weight_grid_2D, bias_grid_2D, mean_squared_error, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 # ax.set_zlim(0.0, 20000.0)
@@ -157,7 +165,7 @@ ax.set_ylabel("Normalized Bias")
 ax.set_zlabel("Normalized Loss")
 ax.set_title("Normalized Model")
 
-plt.show()
+# plt.show()
 
 c = np.array([20.0])
 f_gt = c * 1.8 + 32

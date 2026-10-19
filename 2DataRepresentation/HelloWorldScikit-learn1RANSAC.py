@@ -14,8 +14,11 @@
 #       c]
 import numpy as np
 from sklearn import linear_model
+import matplotlib
 import matplotlib.pyplot as plt
 from numpy.random import default_rng
+
+matplotlib.use("TkAgg")
 
 rng = default_rng(1)
 
