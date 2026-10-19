@@ -14,12 +14,12 @@ np.random.seed(1)
 n_samples_per_class = 100
 
 class0_x0_mean = 10.0
-class0_x0_std = 5.0
+class0_x0_std = 3.0
 class0_x1_mean = 20.0
 class0_x1_std = 2.0
 
 class1_x0_mean = 20.0
-class1_x0_std = 5.0
+class1_x0_std = 3.0
 class1_x1_mean = 10.0
 class1_x1_std = 2.0
 
@@ -60,12 +60,12 @@ ax.set_title("Split Data")
 # plt.show()
 # plt.close(fig)
 
-# model = LinearSVC()
+model = LinearSVC()
 # model = KNeighborsClassifier(n_neighbors=7)
 # model = DecisionTreeClassifier()
 # model = RandomForestClassifier()
 # model = AdaBoostClassifier()
-model = MLPClassifier()
+# model = MLPClassifier()
 
 model.fit(X_train, Y_train)
 
