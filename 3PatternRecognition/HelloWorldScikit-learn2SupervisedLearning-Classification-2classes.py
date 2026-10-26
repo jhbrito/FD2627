@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC, NuSVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier, plot_tree
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, ExtraTreesClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn import metrics
 
@@ -60,11 +60,11 @@ ax.set_title("Split Data")
 # plt.show()
 # plt.close(fig)
 
-
 model = KNeighborsClassifier(n_neighbors=7)
 # model = DecisionTreeClassifier()
-# model = RandomForestClassifier()
-# model = AdaBoostClassifier()
+# model = RandomForestClassifier(n_estimators=50)
+# model = ExtraTreesClassifier(n_estimators=50)
+# model = AdaBoostClassifier(n_estimators=100, learning_rate=1.0)
 # model = LinearSVC()
 # model = MLPClassifier()
 
